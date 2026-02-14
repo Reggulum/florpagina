@@ -1,0 +1,10 @@
+const petalsData = [
+  { type:"video", src:"media/video1.mp4" },
+  { type:"text", message:" Tal vez te suene muy sentimental, pero es que literalmente te llevo conmigo todo el día en el corazón, cada segundo en mi mente a diario, tu recuerdo vive conmigo, Cada que te miro dan ganas de escribir una historia contigo, una que se vuelva tu favorita y en cada capítulo exista una aventura en dónde terminemos felices para siempre " },
+  { type:"video", src:"media/video2.mp4" },
+  { type:"text", message:" Es que la primera vez que te miré a los ojos, desde una fotografía, desde una video llamada, supe que las estrellas no estaban en el cielo estaban justo frente de mí y ahí me di cuenta de que en ti quería vivir. Tengo miedo de no cumplir tus expectativas de que mires en alguien más lo que a mí me falta, pero si te digo algo, tu no debes tener miedo, ante mis ojos eres el universo, la estrella más grande y brillante del atardecer más hermoso de todos eres lo más bonito de verdad.🌹" },
+  { type:"video", src:"media/video3.mp4" },
+  { type:"text", message:" Puedes estar lejos de mis ojos, lejos de mis manos, lejos de mi cuerpo, pero no de mi corazon ni de mi alma ✨" },
+  { type:"video", src:"media/video4.mp4" },
+  { type:"text", message:"Me enamoré de ti no por tu físico, tampoco por lo que tienes, sino por lo que eres y lo que puedes dar a pesar de estar detrás de una pantalla, Iluminaste mi vida, esa parte que ya era irreconocible, ahora sonrio, mis ojos tienen ese brillo que nadie pudo ver antes, esos anhelos y suspiros que provocas cada que un mensaje tuyo llega, Eres más que una llama encendida en mi corazón, eres esa parte de mi vida que ahora quiero que no se apague y si llega a desvanecer haré todo lo posible e imposible por estar siempre contigo. ❤️" }
+];

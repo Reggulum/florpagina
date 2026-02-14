@@ -1,0 +1,69 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body {
+  background: radial-gradient(circle, #1a0505 0%, #000000 100%);
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INTRO */
+.intro { position: fixed; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; background: black; z-index: 100; }
+.intro h1 { font-family: 'Dancing Script', cursive; font-size: 60px; color: #ff1744; text-shadow: 0 0 20px rgba(255, 23, 68, 0.5); }
+#startBtn { background: #ff1744; border: none; padding: 12px 45px; border-radius: 30px; color: white; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 25px; box-shadow: 0 0 20px #ff1744; transition: 0.3s; }
+
+/* MAIN */
+.main { display: none; flex-direction: column; align-items: center; width: 100%; transition: opacity 1s; }
+.top-text { text-align: center; margin-bottom: 30px; }
+.top-text h2 { font-family: 'Dancing Script', cursive; font-size: 45px; color: #ff4d6d; }
+
+/* FLOR */
+.glass { width: 300px; height: 420px; border: 3px solid rgba(255, 255, 255, 0.2); border-radius: 150px 150px 40px 40px; position: relative; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(1px); transition: all 1.5s ease; }
+.stem { width: 6px; height: 220px; background: linear-gradient(to bottom, #2d6a4f, #1b4332); position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); border-radius: 10px; }
+.center { width: 35px; height: 35px; background: radial-gradient(circle, #ff1744, #880e4f); border-radius: 50%; position: absolute; top: 135px; left: 50%; transform: translateX(-50%); z-index: 10; box-shadow: 0 0 20px #ff1744; }
+#petalsContainer { position: absolute; top: 152px; left: 50%; }
+
+.petal {
+  width: 50px; height: 70px;
+  background: linear-gradient(135deg, #ff4d6d 0%, #ff1744 50%, #880e4f 100%);
+  border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+  position: absolute; cursor: pointer; display: flex; justify-content: center; align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5); transform-origin: center bottom; transition: 0.4s;
+}
+.petal.type-video::after { content: "▶"; color: white; font-size: 14px; }
+.petal.type-text::after { content: "✉"; color: white; font-size: 18px; }
+
+/* MODAL */
+.modal { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.9); display: none; justify-content: center; align-items: center; z-index: 200; }
+#modalContent { background: #111; padding: 25px; border-radius: 20px; max-width: 85%; border: 2px solid #ff1744; text-align: center; }
+
+/* SORPRESA FINAL */
+#finalScreen {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.8);
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  z-index: 300; text-align: center; padding: 20px;
+}
+.final-box { animation: zoomIn 2s ease forwards; }
+.final-box h2 { font-family: 'Dancing Script', cursive; font-size: 50px; color: #ff1744; margin-bottom: 20px; }
+.final-box p { font-size: 20px; line-height: 1.6; max-width: 600px; color: #ffccd5; }
+
+@keyframes zoomIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* LLUVIA */
+.drop { position: fixed; top: -10vh; user-select: none; pointer-events: none; animation: fall linear forwards; z-index: 400; }
+@keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
+
+/* Asegúrate de que la clase .glass tenga estas transiciones */
+.glass {
+  /* ... tus otros estilos ... */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Efecto hover suave para el botón de reinicio */
+#resetBtn:hover {
+  background: #ff1744 !important;
+  transform: scale(1.05);
+}
